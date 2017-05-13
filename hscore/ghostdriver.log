@@ -1,0 +1,56 @@
+[INFO  - 2017-05-13T14:18:48.403Z] GhostDriver - Main - running on port 52004
+[INFO  - 2017-05-13T14:18:48.730Z] Session [14fdcd40-37e7-11e7-a114-250bc25ba7e7] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-05-13T14:18:48.730Z] Session [14fdcd40-37e7-11e7-a114-250bc25ba7e7] - page.customHeaders:  - {}
+[INFO  - 2017-05-13T14:18:48.730Z] Session [14fdcd40-37e7-11e7-a114-250bc25ba7e7] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-05-13T14:18:48.730Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 14fdcd40-37e7-11e7-a114-250bc25ba7e7
+[ERROR - 2017-05-13T14:18:50.566Z] Session [14fdcd40-37e7-11e7-a114-250bc25ba7e7] - page.onError - msg: ReferenceError: Can't find variable: SDM
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-13T14:18:50.567Z] Session [14fdcd40-37e7-11e7-a114-250bc25ba7e7] - page.onError - stack:
+  sendIndex (https://www.scopus.com/gzip_188260878/bundles/AuthorSearchTop.js:35)
+  loadEvents (https://www.scopus.com/gzip_188260878/bundles/AuthorSearchTop.js:29)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-13T14:18:51.966Z] Session [14fdcd40-37e7-11e7-a114-250bc25ba7e7] - page.onError - msg: ReferenceError: Can't find variable: prs
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-13T14:18:51.966Z] Session [14fdcd40-37e7-11e7-a114-250bc25ba7e7] - page.onError - stack:
+  pcrSend (https://www.scopus.com/gzip_188260878/bundles/AuthorSearchTop.js:31)
+  beforeUnloadEvents (https://www.scopus.com/gzip_188260878/bundles/AuthorSearchTop.js:29)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-13T14:18:53.789Z] Session [14fdcd40-37e7-11e7-a114-250bc25ba7e7] - page.onError - msg: ReferenceError: Can't find variable: SDM
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-13T14:18:53.789Z] Session [14fdcd40-37e7-11e7-a114-250bc25ba7e7] - page.onError - stack:
+  sendIndex (https://www.scopus.com/gzip_732611028/bundles/AuthorFreeResultsTop.js:63)
+  loadEvents (https://www.scopus.com/gzip_732611028/bundles/AuthorFreeResultsTop.js:57)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-13T14:18:55.257Z] Session [14fdcd40-37e7-11e7-a114-250bc25ba7e7] - page.onError - msg: ReferenceError: Can't find variable: prs
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-13T14:18:55.257Z] Session [14fdcd40-37e7-11e7-a114-250bc25ba7e7] - page.onError - stack:
+  pcrSend (https://www.scopus.com/gzip_732611028/bundles/AuthorFreeResultsTop.js:59)
+  beforeUnloadEvents (https://www.scopus.com/gzip_732611028/bundles/AuthorFreeResultsTop.js:57)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-13T14:18:59.004Z] Session [14fdcd40-37e7-11e7-a114-250bc25ba7e7] - page.onError - msg: ReferenceError: Can't find variable: SDM
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-13T14:18:59.004Z] Session [14fdcd40-37e7-11e7-a114-250bc25ba7e7] - page.onError - stack:
+  sendIndex (https://www.scopus.com/gzip_N1003824667/bundles/AuthorProfileTop.js:73)
+  loadEvents (https://www.scopus.com/gzip_N1003824667/bundles/AuthorProfileTop.js:67)
+
+  phantomjs://platform/console++.js:263 in error
+[INFO  - 2017-05-13T14:23:48.463Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-05-13T14:23:48.472Z] SessionManagerReqHand - _cleanupWindowlessSessions - Deleted Session '14fdcd40-37e7-11e7-a114-250bc25ba7e7', because windowless

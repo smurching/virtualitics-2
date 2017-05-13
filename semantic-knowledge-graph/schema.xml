@@ -1,0 +1,49 @@
+<schema name="blank" version="1.5">
+
+  <uniqueKey>id</uniqueKey>
+
+  <fields>
+	  <field name="id" type="uuid" indexed="true" stored="true" required="false" multiValued="false" />
+    <field name="name" type="keyword" indexed="true" stored="true" required="false" multiValued="true"/>
+<field name="summary" type="text" indexed="true" stored="true" required="false" multiValued="true" />
+<field name="title" type="text" indexed="true" stored="true" required="false" multiValued="true" />
+    <field name="position" type="keyword" indexed="true" stored="true" required="false" multiValued="true"/>
+	  <field name="institutions" type="keyword" indexed="true" stored="true" required="false" multiValued="true"/>
+    <field name="sigwords" type="keyword" indexed="true" stored="true" required="false" multiValued="true"/>
+    <field name="resource" type="keyword" indexed="true" stored="true" required="false" multiValued="true"/>
+    <field name="grade" type="keyword" indexed="true" stored="true" required="false" multiValued="true"/>
+    <field name="pay_plan" type="keyword" indexed="true" stored="true" required="false" multiValued="true"/>
+    <field name="salary" type="long" indexed="true" stored="true" required="false" multiValued="true"/>
+    <field name="bonus" type="long" indexed="true" stored="true" required="false" multiValued="true"/>
+    <field name="location" type="keyword" indexed="true" stored="true" required="false" multiValued="true"/>
+    <field name="citations" type="long" indexed="true" stored="true" required="false" multiValued="true"/>
+    <field name="journal_name" type="keyword" indexed="true" stored="true" required="false" multiValued="true"/>
+    <field name="rank" type="long" indexed="true" stored="true" required="false"/>
+	  <field name="_version_" type="long" indexed="true" stored="true"/>
+  </fields>
+  <types>
+    <fieldType name="uuid" class="solr.UUIDField" indexed="true" />
+	<fieldType name="keyword-case-sens" class="solr.StrField" sortMissingLast="true">
+    </fieldType>
+    <fieldType name="string" class="solr.StrField" sortMissingLast="true" />
+    <fieldType name="long" class="solr.TrieLongField" precisionStep="0" positionIncrementGap="0"/>
+    <fieldType name="keyword" class="solr.TextField" sortMissingLast="true" positionIncrementGap="100" >
+        <analyzer>
+			<tokenizer class="solr.KeywordTokenizerFactory"/>
+            <filter class="solr.ASCIIFoldingFilterFactory"/>
+            <filter class="solr.LowerCaseFilterFactory" />
+        </analyzer>
+    </fieldType>
+
+    <fieldType name="text" class="solr.TextField" positionIncrementGap="100">
+		<analyzer>
+			<filter class="solr.ASCIIFoldingFilterFactory"/>
+			<charFilter class="solr.PatternReplaceCharFilterFactory" pattern="&lt;[\/]{0,1}[a-zA-Z]+[\s]{0,1}[\/]{0,1}&gt;" replacement=" | "/>
+			<charFilter class="solr.HTMLStripCharFilterFactory"/>
+			<charFilter class="solr.PatternReplaceCharFilterFactory" pattern="[\.\,\;\:\?\!\\\/]\s" replacement=" | "/>
+            <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+            <filter class="solr.LowerCaseFilterFactory" />
+        </analyzer>
+    </fieldType>
+  </types>
+</schema>
